@@ -1,0 +1,43 @@
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Formulario de Avión</h2>
+    <form [formGroup]="avionForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="id" class="form-label">ID</label>
+        <input type="number" class="form-control" id="id" formControlName="id" placeholder="Ingrese el ID">
+        <div *ngIf="avionForm.get('id')?.invalid && avionForm.get('id')?.touched" class="text-danger">
+          El ID es obligatorio y debe ser un número.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" formControlName="nombre" placeholder="Ingrese el nombre del avión">
+        <div *ngIf="avionForm.get('nombre')?.invalid && avionForm.get('nombre')?.touched" class="text-danger">
+          El nombre es obligatorio.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="modelo" class="form-label">Modelo</label>
+        <input type="text" class="form-control" id="modelo" formControlName="modelo" placeholder="Ingrese el modelo del avión">
+        <div *ngIf="avionForm.get('modelo')?.invalid && avionForm.get('modelo')?.touched" class="text-danger">
+          El modelo es obligatorio.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="anoFabricacion" class="form-label">Año de Fabricación</label>
+        <input type="number" class="form-control" id="anoFabricacion" formControlName="anoFabricacion" placeholder="Ingrese el año de fabricación">
+        <div *ngIf="avionForm.get('anoFabricacion')?.invalid && avionForm.get('anoFabricacion')?.touched" class="text-danger">
+          El año de fabricación es obligatorio y debe ser un número.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="descripcion" class="form-label">Descripción</label>
+        <input type="text" class="form-control" id="descripcion" formControlName="descripcion" placeholder="Ingrese la descripción del avión">
+        <div *ngIf="avionForm.get('descripcion')?.invalid && avionForm.get('descripcion')?.touched" class="text-danger">
+          La descripción es obligatoria.
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="avionForm.invalid">Cargar Avión</button>
+    </form>
+  </div>
+  

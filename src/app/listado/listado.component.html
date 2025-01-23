@@ -1,1 +1,33 @@
-<p>listado works!</p>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Listado de Cazas</h2>
+  
+    <!-- Mostrar la lista de cazas -->
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Modelo</th>
+          <th>Año de Fabricación</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let caza of cazas">
+          <td>{{ caza.id }}</td>
+          <td>{{ caza.nombre }}</td>
+          <td>{{ caza.modelo }}</td>
+          <td>{{ caza.anoFabricacion }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm me-2" (click)="editCaza(caza.id)">Editar</button>
+            <button class="btn btn-danger btn-sm" (click)="delCaza(caza.id)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Mensaje si no hay cazas -->
+    <div *ngIf="cazas.length === 0" class="alert alert-info mt-3">
+      No hay cazas disponibles.
+    </div>
+  </div>
