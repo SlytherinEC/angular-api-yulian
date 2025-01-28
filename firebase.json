@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/api-yulian",
+    "public": "dist/api-yulian/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
