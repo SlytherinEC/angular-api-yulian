@@ -1,13 +1,13 @@
 <div class="container mt-5">
     <h2 class="text-center mb-4">Formulario de Avión</h2>
     <form [formGroup]="avionForm" (ngSubmit)="onSubmit()">
-      <div class="mb-3">
+      <!-- <div class="mb-3">
         <label for="id" class="form-label">ID</label>
         <input type="number" class="form-control" id="id" formControlName="id" placeholder="Ingrese el ID">
         <div *ngIf="avionForm.get('id')?.invalid && avionForm.get('id')?.touched" class="text-danger">
           El ID es obligatorio y debe ser un número.
         </div>
-      </div>
+      </div> -->
       <div class="mb-3">
         <label for="nombre" class="form-label">Nombre</label>
         <input type="text" class="form-control" id="nombre" formControlName="nombre" placeholder="Ingrese el nombre del avión">
