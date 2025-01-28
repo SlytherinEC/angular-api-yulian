@@ -19,7 +19,7 @@
           <td>{{ caza.modelo }}</td>
           <td>{{ caza.anoFabricacion }}</td>
           <td>
-            <button class="btn btn-warning btn-sm me-2" (click)="editCaza(caza.id)">Editar</button>
+            <button class="btn btn-warning btn-sm me-2" (click)="editCaza(caza.id)" routerLink="/editar-caza/{{caza.id}}" >Editar</button>
             <button class="btn btn-danger btn-sm" (click)="delCaza(caza.id)">Eliminar</button>
           </td>
         </tr>

@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/api-yulian/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

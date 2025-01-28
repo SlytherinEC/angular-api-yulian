@@ -1,16 +1,20 @@
-<main class="main">
-  <div class="content">
-    <h1>ApiYulian</h1>
-    <p>Una aplicación de prueba para probar la integración de Angular con la API de Yulian</p>
-    <ul>
-      <li>
-        <a routerLink="/listado" routerLinkActive="active" ariaCurrentWhenActive="page">Listado de Cazas</a>
+<main class="main container mt-5">
+  <div class="content text-center">
+    <h1 class="display-4 text-primary mb-4">ApiYulian</h1>
+    <p class="lead text-muted">Una aplicación de prueba para probar la integración de Angular con la API de Yulian</p>
+    <hr class="my-4">
+
+    <ul class="nav justify-content-center mb-4">
+      <li class="nav-item">
+        <a class="nav-link btn btn-outline-primary mx-2" routerLink="/listado" routerLinkActive="active" ariaCurrentWhenActive="page">Listado de Cazas</a>
       </li>
-      <li>
-        <a routerLink="/formulario" routerLinkActive="active" ariaCurrentWhenActive="page">Formulario</a>
+      <li class="nav-item">
+        <a class="nav-link btn btn-outline-secondary mx-2" routerLink="/formulario" routerLinkActive="active" ariaCurrentWhenActive="page">Insertar Caza</a>
       </li>
     </ul>
-  </div>
-</main>
 
-<router-outlet />
+    <hr>
+  </div>
+
+  <router-outlet></router-outlet>
+</main>

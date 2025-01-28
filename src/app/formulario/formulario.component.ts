@@ -16,7 +16,7 @@ export class FormularioComponent {
 
   constructor(private fb: FormBuilder, private cazasService: CazasService) {
     this.avionForm = this.fb.group({
-      id: [null, [Validators.required, Validators.pattern(/^\d+$/)]],
+      id: [''],
       nombre: ['', [Validators.required]],
       modelo: ['', [Validators.required]],
       anoFabricacion: [null, [Validators.required, Validators.pattern(/^\d+$/)]],
@@ -39,8 +39,6 @@ export class FormularioComponent {
           alert('Error al crear el avión: ' + JSON.stringify(error, null, 2));
         }
       )
-      // console.log('Avión cargado:', avion);
-      // alert('Avión cargado: ' + JSON.stringify(avion, null, 2));
     }
   }
 }
